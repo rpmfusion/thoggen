@@ -1,7 +1,7 @@
 Summary: DVD backup utility
 Name: thoggen
 Version: 0.7.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2+
 Group: Applications/Multimedia
 URL: http://thoggen.net/
@@ -63,6 +63,9 @@ and Gtk+.
 
 
 %changelog
+* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.7.1-3
+- rebuild for new F11 features
+
 * Sat Oct 18 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 0.7.1-2
 - rebuild for RPM Fusion
 
