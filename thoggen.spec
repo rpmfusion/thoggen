@@ -1,7 +1,7 @@
 Summary: DVD backup utility
 Name: thoggen
 Version: 0.7.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPLv2+
 Group: Applications/Multimedia
 URL: http://thoggen.net/
@@ -9,6 +9,7 @@ Source: http://downloads.sf.net/thoggen/thoggen-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires: gstreamer-plugins-good
 Requires: gstreamer-plugins-ugly
+BuildRequires: desktop-file-utils
 BuildRequires: gettext
 BuildRequires: perl(XML::Parser)
 BuildRequires: gtk2-devel
@@ -46,7 +47,10 @@ and Gtk+.
 %{__cat} thoggen_iso_639.lang >> %{name}.lang
 # Remove installed docs which we include as %%doc here
 %{__rm} -rf %{buildroot}%{_docdir}/thoggen/
-
+desktop-file-install --vendor="" \
+  --add-category="X-AudioVideoImport" \
+  --dir %{buildroot}%{_datadir}/applications \
+  %{buildroot}%{_datadir}/applications/thoggen.desktop
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -63,6 +67,9 @@ and Gtk+.
 
 
 %changelog
+* Fri Oct 23 2009 Orcan Ogetbil <oged[DOT]fedora[AT]gmail[DOT]com> - 0.7.1-4
+- Update desktop file according to F-12 FedoraStudio feature
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.7.1-3
 - rebuild for new F11 features
 
