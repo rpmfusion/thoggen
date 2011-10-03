@@ -16,7 +16,9 @@ BuildRequires: gtk2-devel
 BuildRequires: libglade2-devel
 BuildRequires: gstreamer-devel >= 0.10.14
 BuildRequires: gstreamer-plugins-base-devel >= 0.10.14
+%if 0%{?fedora} < 15
 BuildRequires: hal-devel >= 0.5.7
+%endif
 BuildRequires: dbus-glib-devel >= 0.71
 BuildRequires: libdvdread-devel
 # The videobox plugin is here
