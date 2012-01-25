@@ -1,7 +1,7 @@
 Summary: DVD backup utility
 Name: thoggen
 Version: 0.7.1
-Release: 5%{?dist}
+Release: 6%{?dist}
 License: GPLv2+
 Group: Applications/Multimedia
 URL: http://thoggen.net/
@@ -69,6 +69,9 @@ desktop-file-install --vendor="" \
 
 
 %changelog
+* Wed Jan 25 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.7.1-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Mon Oct 03 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.7.1-5
 - Disable deprecated libhal
 
